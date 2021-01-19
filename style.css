@@ -1,24 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-#start {
+button {
     background-color: darkgrey;
-    
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 5px;
-    
-    padding: 1rem 2rem;
-
+    cursor: pointer;
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
 
+    margin: 5px;
+    padding: 1rem 2rem;
     outline: none;
     border: none;
     border-radius: 0.25rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, .3);
+}
 
-    cursor: pointer;
+#buttonBar {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 body {

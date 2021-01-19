@@ -8,8 +8,7 @@ function init() {
     container.appendChild(canvasMgr.canvas);
     
     canvasMgr.ctx = canvasMgr.canvas.getContext('2d');
-    canvasMgr.ctx.fillStyle = '#000000';
-    canvasMgr.ctx.fillRect(0, 0, canvasMgr.canvas.width, canvasMgr.canvas.height);
+    clearCanvas();
     
     // last known position:
     canvasMgr.pos = { x: 0, y: 0 };
@@ -28,6 +27,16 @@ function openCanvas() {
     }
     
     toggleFullscreen(canvasMgr.canvas);
+}
+
+function clearCanvas() {
+    canvasMgr.ctx.fillStyle = '#000000';
+    canvasMgr.ctx.fillRect(
+        0, 
+        0, 
+        canvasMgr.canvas.width, 
+        canvasMgr.canvas.height
+    );
 }
 
 function draw(evt) {
@@ -95,4 +104,5 @@ function isFullscreen() {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("start").addEventListener("click", openCanvas);
+    document.getElementById("clear").addEventListener("click", clearCanvas);
 });

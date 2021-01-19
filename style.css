@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+#start {
+    background-color: darkgrey;
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 5px;
+    
+    padding: 1rem 2rem;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, .3);
+
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+}
+
+#main canvas {
+    max-width: 100%;
+    max-height: 100%;
+}

@@ -39,6 +39,16 @@ function clearCanvas() {
     );
 }
 
+function saveCanvas() {
+    let downloadLink = document.createElement('a');
+    downloadLink.setAttribute('download', 'BlackBoard-export.png');
+    canvasMgr.canvas.toBlob(blob => {
+        let url = URL.createObjectURL(blob);
+        downloadLink.setAttribute('href', url);
+        downloadLink.click();
+    });
+}
+
 function draw(evt) {
     if (
         // Ignore mouse when the left button is not pressed:
@@ -105,4 +115,5 @@ function isFullscreen() {
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("start").addEventListener("click", openCanvas);
     document.getElementById("clear").addEventListener("click", clearCanvas);
+    document.getElementById("save" ).addEventListener("click", saveCanvas);
 });
